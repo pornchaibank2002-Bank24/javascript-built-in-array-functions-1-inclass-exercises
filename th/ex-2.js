@@ -10,6 +10,16 @@
 
 // Start coding here
 
+function addBonusForSelectedDepartment(employeeInfo, bonus, department) {
+  return employeeInfo.reduce((total, employee) => {
+    if (employee.department === department) {
+      return total + employee.salary + bonus;
+    }
+
+    return total;
+  }, 0);
+}
+
 const employeeInfo = [
   {
     firstname: "Alice",
