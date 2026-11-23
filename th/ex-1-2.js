@@ -8,8 +8,18 @@
 
 // Start coding here
 
-const numbers1 = [3, -5, 10, 12, -7, 0, 8, 2];
-console.log(sumNegativeNumbers(numbers1)); // -12
-
-const number2 = [0, -4, -1, -5, 6, 5, 0];
-console.log(sumNegativeNumbers(number2)); // -10
+function sumNegativeNumbers(numbers) {
+    return numbers.reduce((sum, number) => {
+      if (number < 0) {
+        return sum + number;
+      }
+  
+      return sum;
+    }, 0);
+  }
+  
+  const numbers1 = [3, -5, 10, 12, -7, 0, 8, 2];
+  console.log(sumNegativeNumbers(numbers1)); // -12
+  
+  const number2 = [0, -4, -1, -5, 6, 5, 0];
+  console.log(sumNegativeNumbers(number2)); // -10
